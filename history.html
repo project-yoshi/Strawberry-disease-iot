@@ -112,16 +112,10 @@
             </div>
             <nav class="hidden md:flex items-center gap-10">
                 <a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors font-['Manrope'] tracking-tight text-sm font-semibold"
-                    href="#">HOME</a>
+                    href="index.html">HOME</a>
                 <a class="text-red-700 dark:text-red-500 border-b-2 border-red-700 dark:border-red-500 pb-1 font-['Manrope'] tracking-tight text-sm font-semibold"
-                    href="#">HISTORY</a>
+                    href="history.html">HISTORY</a>
             </nav>
-            <div class="flex items-center gap-4">
-                <button
-                    class="material-symbols-outlined text-stone-600 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 p-2 rounded-full transition-all duration-200">
-                    account_circle
-                </button>
-            </div>
         </div>
         <div class="bg-stone-100 dark:bg-stone-800 h-[1px] w-full"></div>
     </header>
@@ -142,14 +136,14 @@
                 <div class="relative group">
                     <select
                         class="appearance-none bg-surface-container-lowest border-none rounded-lg px-5 py-3 pr-12 font-label text-sm font-medium focus:ring-2 focus:ring-secondary/20 transition-all cursor-pointer">
-                        <option>Semua Penyakit</option>
-                        <option>Leaf Spot</option>
-                        <option>Powdery Mildew</option>
-                        <option>Blight</option>
-                        <option>Sehat</option>
+                        <option value="">Semua Kelas</option>
+                        <option value="antraknosa">Antraknosa</option>
+                        <option value="jamur_abu_abu">Jamur Abu-abu</option>
+                        <option value="bercak_daun">Bercak Daun</option>
+                        <option value="buah_sehat">Buah Sehat</option>
+                        <option value="daun_sehat">Daun Sehat</option>
                     </select>
-                    <span
-                        class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+
                 </div>
                 <div class="relative group">
                     <select
@@ -158,8 +152,6 @@
                         <option>Waktu Terlama</option>
                         <option>Akurasi Tertinggi</option>
                     </select>
-                    <span
-                        class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">calendar_today</span>
                 </div>
             </div>
             <button
@@ -192,120 +184,8 @@
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-surface-container-low">
-                        <!-- Row 1 -->
-                        <tr class="hover:bg-surface-container-low/30 transition-colors group">
-                            <td class="px-8 py-6 font-label text-sm text-on-surface">13/04 10:15</td>
-                            <td class="px-8 py-6">
-                                <div class="w-16 h-16 rounded-lg overflow-hidden bg-surface-container shadow-inner">
-                                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                        data-alt="macro close-up of a strawberry leaf showing small circular reddish brown spots with sharp focus and bright natural daylight"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcO3g3A2CBBAFcM82fIeGJ8FEJCsLxcMgddl6AgvTpXgvElT_ldERAxFqvuEcrbAiib7Eg_ed6TpJd9MFn-o0bc93du78CJ_r2L3urSQEJ3QnPunbh4KzdqgWFrtUs6Qgs3wgG1JzyWioR5VjL7gReUonC9B4jgh_DARKjMHy2wYz_l2jZF8Ukp6YIxBDGH6vOPki5i-_-9KfnhNcGbP3H7i-D1r4yYNY77UPF3TkmBFNng54lPEqbFSH4DeDOKwWewmnIOknzisc" />
-                                </div>
-                            </td>
-                            <td class="px-8 py-6">
-                                <span
-                                    class="px-3 py-1 bg-error-container text-on-error-container rounded-full text-xs font-bold font-label">Leaf
-                                    Spot</span>
-                            </td>
-                            <td class="px-8 py-6 text-center font-headline font-bold text-lg text-primary">96.8%</td>
-                            <td class="px-8 py-6">
-                                <div class="flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-                                    <span class="font-label text-sm font-medium text-on-surface">ON <span
-                                            class="text-on-surface-variant opacity-60 text-xs">(15 dtk)</span></span>
-                                </div>
-                            </td>
-                        </tr>
-                        <!-- Row 2 -->
-                        <tr class="hover:bg-surface-container-low/30 transition-colors group">
-                            <td class="px-8 py-6 font-label text-sm text-on-surface">13/04 09:30</td>
-                            <td class="px-8 py-6">
-                                <div class="w-16 h-16 rounded-lg overflow-hidden bg-surface-container shadow-inner">
-                                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                        data-alt="strawberry leaf covered with white powdery fungal growth texture under soft diffused greenhouse lighting"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJvpcxm0SUz2EJYotfqRwaToCQNL-l7WhS3pJBE4iJ2c-UvWbzZ19fbu8_W3UjtsbRV8BazqabHeMJAk-NmZ5JLwDe82G2l3BELqUzb5Naxy-v2fs6dmYkHmPBVzXaUG17UeMmTBfmSQ59tpB0igUdl2qThmtZsj0AaEVQQjCjMFtQEtOEiAgJyoL-Wo-EDK60s8uEe2F7ZcQKCbNaNfIc49BMwbgt-t5xmMIOBEAxbcThTcpofIDpTnwNKomAYdAR93hPdtomcrk" />
-                                </div>
-                            </td>
-                            <td class="px-8 py-6">
-                                <span
-                                    class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-bold font-label">Powdery
-                                    Mildew</span>
-                            </td>
-                            <td class="px-8 py-6 text-center font-headline font-bold text-lg text-on-surface">89.2%</td>
-                            <td class="px-8 py-6">
-                                <div class="flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-                                    <span class="font-label text-sm font-medium text-on-surface">ON <span
-                                            class="text-on-surface-variant opacity-60 text-xs">(10 dtk)</span></span>
-                                </div>
-                            </td>
-                        </tr>
-                        <!-- Row 3 -->
-                        <tr class="hover:bg-surface-container-low/30 transition-colors group">
-                            <td class="px-8 py-6 font-label text-sm text-on-surface">12/04 15:45</td>
-                            <td class="px-8 py-6">
-                                <div class="w-16 h-16 rounded-lg overflow-hidden bg-surface-container shadow-inner">
-                                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                        data-alt="vibrant healthy green strawberry leaf with serrated edges and clear veins in high resolution professional photography"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOTTeUe643qG8oaIEU-bpobTdzzPjd_IMXyrLAZczUjU_wPUrOwucTjkgchvgqeZjgS20H1PXrNL_jwEW3wniGMmh0hEKyxodvjRaw5kGwWsF3wInFoVrgqPAWAGln67xM0ubyzDKESse6dF9P2XMNvjGKoPH02Is8_sapY6NOQ92FHDVVTW-PtwbW0_-sZRM_SR6XBPvkcAV2EYzdTQbI-YW6dQf6su2iYEDHygjGDriosdlqmaqYX6u0eAFIqu5qePMk6P7ux08" />
-                                </div>
-                            </td>
-                            <td class="px-8 py-6">
-                                <span
-                                    class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold font-label">Sehat</span>
-                            </td>
-                            <td class="px-8 py-6 text-center font-headline font-bold text-lg text-secondary">99.1%</td>
-                            <td class="px-8 py-6">
-                                <div class="flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-stone-300"></span>
-                                    <span class="font-label text-sm font-medium text-on-surface-variant">Standby</span>
-                                </div>
-                            </td>
-                        </tr>
-                        <!-- Row 4 -->
-                        <tr class="hover:bg-surface-container-low/30 transition-colors group">
-                            <td class="px-8 py-6 font-label text-sm text-on-surface">12/04 08:00</td>
-                            <td class="px-8 py-6">
-                                <div class="w-16 h-16 rounded-lg overflow-hidden bg-surface-container shadow-inner">
-                                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                        data-alt="wilted strawberry leaf with dark necrotic blight patches on the edges with dramatic natural lighting"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD52bK5ZEVym4D1R6Lqu1Lhi3dTn7niMOlVBOU364TTtURcvWB1pbH_rlZINswXR1QGoCtarlXj1czL5qJDSBbQjjV4PQ0ZLVdoznSWxZ0v067lWB8V6n314GZEPswEfla_WjJ2E9mmaLKvfBrQVW_73ndhy3ccqXgnFHx9sWtA0VCCPtxvxBnN89DdxsaYTQj6Z6Ltj2Lg0xoAIu0iMAXU7zdj2ppTmat8BHKC5LqIMPkFDpcsUu8VUUYd0KNBtRtCEGc_KbhkdFc" />
-                                </div>
-                            </td>
-                            <td class="px-8 py-6">
-                                <span
-                                    class="px-3 py-1 bg-primary text-white rounded-full text-xs font-bold font-label">Blight</span>
-                            </td>
-                            <td class="px-8 py-6 text-center font-headline font-bold text-lg text-primary">92.5%</td>
-                            <td class="px-8 py-6">
-                                <div class="flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-                                    <span class="font-label text-sm font-medium text-on-surface">ON <span
-                                            class="text-on-surface-variant opacity-60 text-xs">(20 dtk)</span></span>
-                                </div>
-                            </td>
-                        </tr>
-                        <!-- Row 5 -->
-                        <tr class="hover:bg-surface-container-low/30 transition-colors group">
-                            <td class="px-8 py-6 font-label text-sm text-on-surface">11/04 16:20</td>
-                            <td class="px-8 py-6">
-                                <div class="w-16 h-16 rounded-lg overflow-hidden bg-surface-container shadow-inner">
-                                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                        data-alt="group of healthy green strawberry plants in a modern vertical farm with soft artificial grow lights"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdOYVN2HFfS890k_EwlRyuhXz27zE1yUYBUwpo_M0fJzGvK_oEjXeM9T5TIJI5RxWzARyvk1it3j61pAPK9Dt2Ao3Tm3WwI159hYLkB0_a-3L4HvrJiqzvXbLVFhdFRdY6kgTiLFdx8VQCRqJ4cle5jGnc8xZClIooZifrKtIpvcKxJjTzBfs9oT-GSWyrAUUx1PPe5pe1IKOVMTxjOFCRy1Y-XXAsy-lG382ST_y5ACFeVzwxcsbEp6ZkHYbOLMcjopvYYNyRj0I" />
-                                </div>
-                            </td>
-                            <td class="px-8 py-6">
-                                <span
-                                    class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold font-label">Sehat</span>
-                            </td>
-                            <td class="px-8 py-6 text-center font-headline font-bold text-lg text-secondary">98.4%</td>
-                            <td class="px-8 py-6">
-                                <div class="flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-stone-300"></span>
-                                    <span class="font-label text-sm font-medium text-on-surface-variant">Standby</span>
-                                </div>
-                            </td>
+                        <tr>
+                            <td colspan="5" class="px-8 py-12 text-center text-on-surface-variant font-medium">Belum ada riwayat deteksi.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -321,10 +201,6 @@
             <div class="flex items-center gap-2">
                 <button
                     class="w-10 h-10 rounded-full flex items-center justify-center font-headline font-bold text-sm bg-primary text-white shadow-lg shadow-primary/20 transition-all">1</button>
-                <button
-                    class="w-10 h-10 rounded-full flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant hover:bg-surface-container-low transition-all">2</button>
-                <button
-                    class="w-10 h-10 rounded-full flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant hover:bg-surface-container-low transition-all">3</button>
             </div>
             <button
                 class="px-4 py-2 text-on-surface-variant hover:text-on-surface font-label text-xs font-bold tracking-widest uppercase transition-colors flex items-center gap-2">

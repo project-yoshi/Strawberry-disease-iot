@@ -102,14 +102,9 @@
                 STRAWBERRY SENSE
             </div>
             <nav class="hidden md:flex items-center space-x-8">
-                <a class="font-['Manrope'] tracking-tight text-sm font-semibold text-red-700 dark:text-red-500 border-b-2 border-red-700 dark:border-red-500 pb-1" href="#">HOME</a>
-                <a class="font-['Manrope'] tracking-tight text-sm font-semibold text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">HISTORY</a>
+                <a class="font-['Manrope'] tracking-tight text-sm font-semibold text-red-700 dark:text-red-500 border-b-2 border-red-700 dark:border-red-500 pb-1" href="index.html">HOME</a>
+                <a class="font-['Manrope'] tracking-tight text-sm font-semibold text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="history.html">HISTORY</a>
             </nav>
-            <div class="flex items-center gap-4">
-                <button class="p-2 rounded-full hover:bg-stone-50 dark:hover:bg-stone-800 transition-all duration-200">
-                    <span class="material-symbols-outlined text-stone-600">account_circle</span>
-                </button>
-            </div>
         </div>
         <div class="bg-stone-100 dark:bg-stone-800 h-[1px] w-full"></div>
     </header>
@@ -125,11 +120,11 @@
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
                 
-                <section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm transition-all duration-300 flex flex-col justify-between">
+                <section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm transition-all duration-300 flex flex-col justify-between border border-surface-container-high">
                     <div>
                         <h2 class="text-xl font-bold font-headline mb-8 flex items-center gap-3">
                             <span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm">1</span>
-                            UNGGAH & PENGATURAN
+                            UNGGAH FOTO
                         </h2>
                         
                         <div class="border-2 border-dashed border-outline-variant rounded-xl p-12 flex flex-col items-center justify-center bg-surface-container-low hover:bg-surface-container transition-colors group cursor-pointer mb-8">
@@ -151,91 +146,95 @@
                         </div>
                     </div>
                     
-                    <button class="w-full primary-gradient text-white py-5 rounded-xl font-bold text-lg tracking-wide hover:opacity-90 active:scale-[0.98] transition-all shadow-lg flex items-center justify-center gap-3">
+                    <button class="w-full primary-gradient text-white py-5 rounded-xl font-bold text-lg tracking-wide hover:opacity-90 active:scale-[0.98] transition-all shadow-lg flex items-center justify-center gap-3 opacity-90">
                         <span class="material-symbols-outlined">analytics</span>
                         DETEKSI PENYAKIT
                     </button>
                 </section>
 
-                <section class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col h-full">
-                    <div class="relative overflow-hidden h-64 md:h-72 w-full shrink-0">
-                        <img alt="Strawberry leaf diagnosis" class="w-full h-full object-cover" data-alt="Macro close-up of a vibrant green strawberry leaf showing small reddish-brown spot lesions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmNOT9dyBuDLyzz9QRd1U71V0YdTD6gqgeHsg5sJmUcJ-o1omdkRxsiBTyBRW48YBbU7qepKiqfdVwV-b6LB2xkCefbJTmxTSLo5MbH9SkAiHyyoToV6BZh1neq4ql0_-lSLFROYsUpicPEl8xJGAHonew6H2pkCpIHNDBEeu_Mycm6hHXyFcVkkUFqwRfV4xb8q3Fz1u8xVc-mAqJJJCj3fh2TSiZeEat8IYBGXMA4k4VoeFoLvgCEt9wVtelH6simGmhxMU1e3A" />
-                        <div class="absolute bottom-4 left-4 right-4 glass-panel p-4 rounded-lg">
+                <section class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col h-full border border-surface-container-high">
+                    <div class="relative overflow-hidden h-64 md:h-72 w-full shrink-0 bg-surface-container flex flex-col items-center justify-center border-b border-surface-container-high">
+                        <span class="material-symbols-outlined text-6xl mb-3 text-on-surface-variant opacity-40">imagesmode</span>
+                        <p class="text-sm font-medium text-on-surface-variant opacity-60">Belum ada foto yang dianalisis</p>
+                        
+                        <div class="absolute bottom-4 left-4 right-4 glass-panel p-4 rounded-lg border border-white/20">
                             <div class="flex justify-between items-center">
                                 <span class="font-label text-[10px] uppercase font-bold tracking-widest text-on-surface">CNN Confidence</span>
-                                <span class="font-headline font-black text-primary text-xl">96.8%</span>
+                                <span class="font-headline font-black text-on-surface-variant text-xl">0%</span>
                             </div>
                             <div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-2 overflow-hidden">
-                                <div class="bg-primary h-full w-[96.8%]"></div>
+                                <div class="bg-surface-variant h-full w-[0%]"></div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="p-8 flex flex-col flex-grow justify-between">
+                    <div class="p-8 flex flex-col flex-grow justify-between bg-surface-bright">
                         <div>
-                            <h2 class="text-xl font-bold font-headline mb-6 flex items-center gap-3">
-                                <span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm">2</span>
+                            <h2 class="text-xl font-bold font-headline mb-6 flex items-center gap-3 text-on-surface-variant">
+                                <span class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-sm">2</span>
                                 HASIL ANALISIS CNN
                             </h2>
                             <div class="space-y-6">
-                                <div class="flex items-start gap-4">
-                                    <div class="p-2 rounded-lg bg-error-container">
-                                        <span class="material-symbols-outlined text-error" data-weight="fill">warning</span>
+                                <div class="flex items-start gap-4 opacity-50">
+                                    <div class="p-2 rounded-lg bg-surface-container-low">
+                                        <span class="material-symbols-outlined text-on-surface-variant" data-weight="fill">monitor_heart</span>
                                     </div>
                                     <div>
                                         <p class="font-label text-xs font-bold text-on-surface-variant uppercase mb-1">Status</p>
-                                        <p class="font-headline font-extrabold text-error text-lg">TERDETEKSI PENYAKIT</p>
+                                        <p class="font-headline font-extrabold text-on-surface-variant text-lg">-</p>
                                     </div>
                                 </div>
-                                <div class="flex items-start gap-4">
+                                <div class="flex items-start gap-4 opacity-50">
                                     <div class="p-2 rounded-lg bg-surface-container-low">
                                         <span class="material-symbols-outlined text-on-surface-variant">psychology</span>
                                     </div>
                                     <div>
                                         <p class="font-label text-xs font-bold text-on-surface-variant uppercase mb-1">Diagnosis</p>
-                                        <p class="font-headline font-extrabold text-on-surface text-2xl">Leaf Spot <span class="text-lg font-medium text-on-surface-variant">(Bercak)</span></p>
+                                        <p class="font-headline font-extrabold text-on-surface-variant text-2xl">-</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <p class="text-xs text-on-surface-variant italic mt-8 text-right">Scan processed in 420ms</p>
+                        <p class="text-xs text-on-surface-variant italic mt-8 text-right opacity-0">Scan processed in 0ms</p>
                     </div>
                 </section>
             </div>
 
             <div class="w-full">
-                <section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm border-l-8 border-secondary">
+                <section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm border-l-8 border-surface-container-highest">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
-                        <h2 class="text-xl font-bold font-headline flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center text-sm">3</span>
+                        <h2 class="text-xl font-bold font-headline flex items-center gap-3 text-on-surface-variant">
+                            <span class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-sm">3</span>
                             STATUS KONTROL IOT (MQTT)
                         </h2>
-                        <div class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-bold text-xs uppercase tracking-widest">
-                            <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-                            CONNECTED
+                        <div class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-bold text-xs uppercase tracking-widest">
+                            <span class="w-2 h-2 rounded-full bg-surface-variant"></span>
+                            STANDBY
                         </div>
                     </div>
+                    
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                        <div class="bg-surface rounded-xl p-4">
+                        <div class="bg-surface rounded-xl p-4 opacity-70">
                             <p class="font-label text-[10px] font-bold text-on-surface-variant uppercase mb-2">Status</p>
-                            <p class="font-headline font-bold text-secondary text-lg">MENYALA</p>
+                            <p class="font-headline font-bold text-on-surface-variant text-lg">MATI</p>
                         </div>
-                        <div class="bg-surface rounded-xl p-4">
+                        <div class="bg-surface rounded-xl p-4 opacity-70">
                             <p class="font-label text-[10px] font-bold text-on-surface-variant uppercase mb-2">Action</p>
-                            <p class="font-headline font-bold text-on-surface text-lg">Pompa Aktif</p>
+                            <p class="font-headline font-bold text-on-surface-variant text-lg">-</p>
                         </div>
-                        <div class="bg-surface rounded-xl p-4 col-span-2 md:col-span-2 relative overflow-hidden">
+                        <div class="bg-surface rounded-xl p-4 col-span-2 md:col-span-2 relative overflow-hidden opacity-70">
                             <p class="font-label text-[10px] font-bold text-on-surface-variant uppercase mb-2">Sisa Waktu</p>
-                            <p class="font-headline font-black text-3xl text-on-surface">12 <span class="text-base font-medium text-on-surface-variant">Detik...</span></p>
-                            <div class="absolute bottom-0 left-0 h-1.5 bg-secondary w-[40%] transition-all duration-1000"></div>
+                            <p class="font-headline font-black text-3xl text-on-surface-variant">0 <span class="text-base font-medium text-on-surface-variant">Detik</span></p>
+                            <div class="absolute bottom-0 left-0 h-1.5 bg-surface-variant w-[0%] transition-all duration-1000"></div>
                         </div>
                     </div>
+                    
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="flex-1 px-6 py-4 rounded-xl border-2 border-error text-error font-bold hover:bg-error-container hover:text-error transition-all flex items-center justify-center gap-2">
+                        <button class="flex-1 px-6 py-4 rounded-xl border-2 border-surface-container text-on-surface-variant font-bold hover:bg-surface-container-high transition-all flex items-center justify-center gap-2 opacity-50 cursor-not-allowed" disabled>
                             <span class="material-symbols-outlined text-xl">stop_circle</span>
                             MATIKAN PAKSA
                         </button>
-                        <button class="flex-1 px-6 py-4 rounded-xl bg-surface-container-high text-on-surface-variant font-bold hover:bg-surface-container-highest transition-all flex items-center justify-center gap-2">
+                        <button class="flex-1 px-6 py-4 rounded-xl bg-surface-container text-on-surface-variant font-bold hover:bg-surface-container-highest transition-all flex items-center justify-center gap-2">
                             <span class="material-symbols-outlined text-xl">settings_remote</span>
                             MANUAL OVERRIDE
                         </button>
