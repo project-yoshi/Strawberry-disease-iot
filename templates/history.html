@@ -1,219 +1,129 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Strawberry Sense - Detection History</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
+
     <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-bright": "#f9f9f9",
-                        "primary-container": "#db322f",
-                        "on-secondary-fixed-variant": "#005313",
-                        "on-secondary-fixed": "#002204",
-                        "on-error-container": "#93000a",
-                        "on-tertiary": "#ffffff",
-                        "secondary": "#006e1c",
-                        "tertiary-fixed-dim": "#72d4ef",
-                        "outline-variant": "#e4beb9",
-                        "on-primary-fixed": "#410002",
-                        "secondary-container": "#98f994",
-                        "on-tertiary-fixed": "#001f27",
-                        "error-container": "#ffdad6",
-                        "tertiary-container": "#008097",
-                        "surface-dim": "#dadada",
-                        "surface-container-lowest": "#ffffff",
-                        "tertiary-fixed": "#afecff",
-                        "primary-fixed-dim": "#ffb4ac",
-                        "surface-container-highest": "#e2e2e2",
-                        "surface-variant": "#e2e2e2",
-                        "inverse-on-surface": "#f1f1f1",
-                        "on-surface-variant": "#5b403d",
-                        "outline": "#906f6c",
-                        "on-tertiary-container": "#f9fdff",
-                        "error": "#ba1a1a",
-                        "on-primary": "#ffffff",
-                        "tertiary": "#006578",
-                        "on-secondary-container": "#0c7521",
-                        "surface-container-high": "#e8e8e8",
-                        "primary-fixed": "#ffdad6",
-                        "on-tertiary-fixed-variant": "#004e5d",
-                        "on-secondary": "#ffffff",
-                        "on-background": "#1a1c1c",
-                        "on-primary-fixed-variant": "#93000d",
-                        "secondary-fixed": "#98f994",
-                        "secondary-fixed-dim": "#7ddc7a",
-                        "background": "#f9f9f9",
-                        "inverse-primary": "#ffb4ac",
-                        "inverse-surface": "#2f3131",
-                        "surface-tint": "#bb171c",
-                        "surface-container-low": "#f3f3f3",
-                        "on-primary-container": "#fffbff",
-                        "surface-container": "#eeeeee",
-                        "on-surface": "#1a1c1c",
-                        "on-error": "#ffffff",
-                        "primary": "#b7131a",
-                        "surface": "#f9f9f9"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "1.5rem",
-                        "full": "9999px"
-                    },
-                    "fontFamily": {
-                        "headline": ["Manrope"],
-                        "body": ["Manrope"],
-                        "label": ["Inter"]
-                    }
-                },
-            },
-        }
+        tailwind.config = { theme: { extend: { colors: { "surface-bright": "#f9f9f9", "primary": "#b7131a", "surface-container-lowest": "#ffffff", "surface-container-low": "#f3f3f3" }, fontFamily: { "headline": ["Manrope"], "body": ["Manrope"], "label": ["Inter"] } } } }
     </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-
-        .active-nav-border {
-            position: relative;
-        }
-
-        .active-nav-border::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: currentColor;
-        }
-    </style>
 </head>
 
-<body class="bg-surface font-body text-on-surface">
-    <!-- TopNavBar -->
-    <header class="bg-white dark:bg-stone-900 full-width top-0 z-50 sticky">
+<body class="bg-[#f9f9f9] font-body text-gray-900">
+    <header class="bg-white full-width top-0 z-50 sticky border-b border-gray-200 shadow-sm">
         <div class="flex justify-between items-center w-full px-8 py-4 max-w-[1440px] mx-auto">
-            <div class="text-xl font-black tracking-tighter text-red-700 dark:text-red-500 uppercase">
-                STRAWBERRY SENSE
-            </div>
+            <div class="text-xl font-black tracking-tighter text-red-700 uppercase">STRAWBERRY SENSE</div>
             <nav class="hidden md:flex items-center gap-10">
-                <a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors font-['Manrope'] tracking-tight text-sm font-semibold"
-                    href="index.html">HOME</a>
-                <a class="text-red-700 dark:text-red-500 border-b-2 border-red-700 dark:border-red-500 pb-1 font-['Manrope'] tracking-tight text-sm font-semibold"
-                    href="history.html">HISTORY</a>
+                <a class="text-sm font-semibold text-stone-600 hover:text-stone-900 transition-colors" href="/">HOME</a>
+                <a class="text-sm font-semibold text-red-700 border-b-2 border-red-700 pb-1" href="/history">HISTORY</a>
             </nav>
         </div>
-        <div class="bg-stone-100 dark:bg-stone-800 h-[1px] w-full"></div>
     </header>
-    <main class="max-w-[1440px] mx-auto px-8 py-12">
-        <!-- Editorial Header -->
-        <div class="mb-12">
-            <span class="font-label text-[11px] uppercase tracking-[0.2em] text-secondary font-bold mb-2 block">Archive
-                Records</span>
-            <h1 class="text-[3.5rem] leading-none font-extrabold font-headline tracking-tighter text-on-surface mb-4">
-                Detection History</h1>
-            <p class="text-on-surface-variant max-w-2xl text-lg">Detailed analysis and chronological health records of
-                the strawberry cultivation sectors.</p>
-        </div>
-        <!-- Filter Area -->
-        <div
-            class="bg-surface-container-low rounded-xl p-6 mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
-            <div class="flex flex-wrap gap-4 w-full md:w-auto">
-                <div class="relative group">
-                    <select
-                        class="appearance-none bg-surface-container-lowest border-none rounded-lg px-5 py-3 pr-12 font-label text-sm font-medium focus:ring-2 focus:ring-secondary/20 transition-all cursor-pointer">
-                        <option value="">Semua Kelas</option>
-                        <option value="antraknosa">Antraknosa</option>
-                        <option value="jamur_abu_abu">Jamur Abu-abu</option>
-                        <option value="bercak_daun">Bercak Daun</option>
-                        <option value="buah_sehat">Buah Sehat</option>
-                        <option value="daun_sehat">Daun Sehat</option>
-                    </select>
 
-                </div>
-                <div class="relative group">
-                    <select
-                        class="appearance-none bg-surface-container-lowest border-none rounded-lg px-5 py-3 pr-12 font-label text-sm font-medium focus:ring-2 focus:ring-secondary/20 transition-all cursor-pointer">
-                        <option>Waktu Terbaru</option>
-                        <option>Waktu Terlama</option>
-                        <option>Akurasi Tertinggi</option>
-                    </select>
-                </div>
-            </div>
-            <button
-                class="flex items-center gap-2 bg-on-surface text-surface-container-lowest px-6 py-3 rounded-full font-label text-sm font-bold hover:opacity-90 active:scale-95 transition-all w-full md:w-auto justify-center">
-                <span class="material-symbols-outlined text-[20px]">download</span>
-                Export
-            </button>
+    <main class="max-w-[1440px] mx-auto px-8 py-12">
+        <div class="mb-12">
+            <span class="font-label text-[11px] uppercase tracking-[0.2em] text-green-700 font-bold mb-2 block">Archive
+                Records</span>
+            <h1 class="text-5xl font-extrabold tracking-tighter mb-4">Detection History</h1>
+            <p class="text-gray-600 max-w-2xl text-lg">Detailed analysis and chronological health records of the
+                strawberry cultivation sectors.</p>
         </div>
-        <!-- Data Table Section -->
-        <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+
+        <div class="bg-white rounded-xl p-6 mb-8 flex justify-end gap-4 shadow-sm border border-gray-100">
+            <form action="/delete-all" method="POST"
+                onsubmit="return confirm('Yakin ingin menghapus seluruh riwayat? Data tidak dapat dikembalikan.');">
+                <button type="submit"
+                    class="flex items-center gap-2 bg-red-100 text-red-700 px-6 py-3 rounded-full font-label text-sm font-bold hover:bg-red-200 transition-all">
+                    <span class="material-symbols-outlined text-[20px]">delete</span> Kosongkan Data
+                </button>
+            </form>
+            <a href="/save-history"
+                class="flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-full font-label text-sm font-bold hover:opacity-90 transition-all">
+                <span class="material-symbols-outlined text-[20px]">download</span> Export CSV
+            </a>
+        </div>
+
+        <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
             <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
                     <thead>
-                        <tr class="bg-surface-container-low">
+                        <tr class="bg-gray-100">
                             <th
-                                class="px-8 py-5 font-label text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">
+                                class="px-8 py-5 font-label text-[11px] font-bold uppercase tracking-widest text-gray-500">
                                 WAKTU DETEKSI</th>
                             <th
-                                class="px-8 py-5 font-label text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">
-                                GAMBAR DAUN</th>
+                                class="px-8 py-5 font-label text-[11px] font-bold uppercase tracking-widest text-gray-500">
+                                GAMBAR</th>
                             <th
-                                class="px-8 py-5 font-label text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">
+                                class="px-8 py-5 font-label text-[11px] font-bold uppercase tracking-widest text-gray-500">
                                 HASIL DETEKSI</th>
                             <th
-                                class="px-8 py-5 font-label text-[11px] font-bold uppercase tracking-widest text-on-surface-variant text-center">
+                                class="px-8 py-5 font-label text-[11px] font-bold uppercase tracking-widest text-gray-500 text-center">
                                 AKURASI</th>
                             <th
-                                class="px-8 py-5 font-label text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">
+                                class="px-8 py-5 font-label text-[11px] font-bold uppercase tracking-widest text-gray-500 text-center">
                                 STATUS IOT</th>
+                            <th
+                                class="px-8 py-5 font-label text-[11px] font-bold uppercase tracking-widest text-gray-500 text-center">
+                                AKSI</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-surface-container-low">
-                        <tr>
-                            <td colspan="5" class="px-8 py-12 text-center text-on-surface-variant font-medium">Belum ada riwayat deteksi.</td>
+                    <tbody class="divide-y divide-gray-100">
+                        {% for item in history %}
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="px-8 py-4 font-label text-sm font-medium text-gray-700">{{ item[3] }}</td>
+                            <td class="px-8 py-4">
+                                <img src="{{ url_for('uploaded_file', filename=item[0]) }}"
+                                    class="w-12 h-12 rounded object-cover border border-gray-200 shadow-sm" alt="Daun">
+                            </td>
+                            <td
+                                class="px-8 py-4 font-headline font-bold {% if item[1] in ['Buah Sehat', 'Daun Sehat'] %}text-green-700{% else %}text-red-700{% endif %}">
+                                {{ item[1] }}
+                            </td>
+                            <td class="px-8 py-4 font-headline text-sm font-bold text-center text-gray-700">
+                                {{ item[2] }}%
+                            </td>
+                            <td class="px-8 py-4 font-label text-xs text-center">
+                                {% if item[5]|int > 0 %}
+                                <span class="bg-green-100 text-green-800 px-3 py-1.5 rounded-md font-bold shadow-sm">ON
+                                    ({{ item[5] }}s)</span>
+                                {% else %}
+                                <span
+                                    class="bg-gray-100 text-gray-500 border border-gray-200 px-3 py-1.5 rounded-md font-bold">STANDBY</span>
+                                {% endif %}
+                            </td>
+                            <td class="px-8 py-4 text-center">
+                                <form action="/delete-image" method="POST" class="inline">
+                                    <input type="hidden" name="image_path" value="{{ item[0] }}">
+                                    <button type="submit" class="text-gray-400 hover:text-red-600 transition-colors"
+                                        title="Hapus Riwayat Ini">
+                                        <span class="material-symbols-outlined text-[20px]">delete</span>
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="6" class="px-8 py-16 text-center text-gray-400">
+                                <span
+                                    class="material-symbols-outlined text-4xl block mb-2 opacity-50">receipt_long</span>
+                                <p class="font-medium">Belum ada riwayat deteksi tersimpan.</p>
+                            </td>
+                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
         </div>
-        <!-- Pagination -->
-        <div class="mt-12 flex justify-center items-center gap-4">
-            <button
-                class="px-4 py-2 text-on-surface-variant hover:text-on-surface font-label text-xs font-bold tracking-widest uppercase transition-colors flex items-center gap-2">
-                <span class="material-symbols-outlined text-[16px]">chevron_left</span>
-                Prev
-            </button>
-            <div class="flex items-center gap-2">
-                <button
-                    class="w-10 h-10 rounded-full flex items-center justify-center font-headline font-bold text-sm bg-primary text-white shadow-lg shadow-primary/20 transition-all">1</button>
-            </div>
-            <button
-                class="px-4 py-2 text-on-surface-variant hover:text-on-surface font-label text-xs font-bold tracking-widest uppercase transition-colors flex items-center gap-2">
-                Next
-                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-            </button>
-        </div>
     </main>
-    <!-- Contextual Aesthetic Decoration -->
-    <div
-        class="fixed bottom-0 right-0 w-64 h-64 opacity-[0.03] pointer-events-none -z-10 translate-x-1/4 translate-y-1/4">
-        <span class="material-symbols-outlined text-[20rem]">eco</span>
-    </div>
 </body>
 
 </html>

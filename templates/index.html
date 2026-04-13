@@ -3,73 +3,43 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Strawberry Sense - Diagnostic Dashboard</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
     <script id="tailwind-config">
         tailwind.config = {
-            darkMode: "class",
             theme: {
                 extend: {
-                    "colors": {
+                    colors: {
                         "surface-bright": "#f9f9f9",
                         "primary-container": "#db322f",
-                        "on-secondary-fixed-variant": "#005313",
-                        "on-secondary-fixed": "#002204",
-                        "on-error-container": "#93000a",
-                        "on-tertiary": "#ffffff",
                         "secondary": "#006e1c",
-                        "tertiary-fixed-dim": "#72d4ef",
-                        "outline-variant": "#e4beb9",
-                        "on-primary-fixed": "#410002",
-                        "secondary-container": "#98f994",
-                        "on-tertiary-fixed": "#001f27",
                         "error-container": "#ffdad6",
-                        "tertiary-container": "#008097",
-                        "surface-dim": "#dadada",
                         "surface-container-lowest": "#ffffff",
-                        "tertiary-fixed": "#afecff",
-                        "primary-fixed-dim": "#ffb4ac",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-container": "#eeeeee",
+                        "surface-container-high": "#e8e8e8",
                         "surface-container-highest": "#e2e2e2",
                         "surface-variant": "#e2e2e2",
-                        "inverse-on-surface": "#f1f1f1",
                         "on-surface-variant": "#5b403d",
-                        "outline": "#906f6c",
-                        "on-tertiary-container": "#f9fdff",
                         "error": "#ba1a1a",
-                        "on-primary": "#ffffff",
-                        "tertiary": "#006578",
-                        "on-secondary-container": "#0c7521",
-                        "surface-container-high": "#e8e8e8",
-                        "primary-fixed": "#ffdad6",
-                        "on-tertiary-fixed-variant": "#004e5d",
-                        "on-secondary": "#ffffff",
-                        "on-background": "#1a1c1c",
-                        "on-primary-fixed-variant": "#93000d",
-                        "secondary-fixed": "#98f994",
-                        "secondary-fixed-dim": "#7ddc7a",
-                        "background": "#f9f9f9",
-                        "inverse-primary": "#ffb4ac",
-                        "inverse-surface": "#2f3131",
-                        "surface-tint": "#bb171c",
-                        "surface-container-low": "#f3f3f3",
-                        "on-primary-container": "#fffbff",
-                        "surface-container": "#eeeeee",
-                        "on-surface": "#1a1c1c",
-                        "on-error": "#ffffff",
                         "primary": "#b7131a",
-                        "surface": "#f9f9f9"
+                        "surface": "#f9f9f9",
+                        "on-surface": "#1a1c1c"
                     },
-                    "fontFamily": {
+                    fontFamily: {
                         "headline": ["Manrope"],
                         "body": ["Manrope"],
                         "label": ["Inter"]
                     }
-                },
-            },
+                }
+            }
         }
     </script>
     <style>
@@ -84,7 +54,7 @@
         }
 
         .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
@@ -96,165 +66,311 @@
 </head>
 
 <body class="bg-surface">
-    <header class="bg-white dark:bg-stone-900 full-width top-0 z-50 sticky">
+    <header class="bg-white full-width top-0 z-50 sticky border-b border-surface-container-high shadow-sm">
         <div class="flex justify-between items-center w-full px-8 py-4 max-w-[1440px] mx-auto">
-            <div class="text-xl font-black tracking-tighter text-red-700 dark:text-red-500">
-                STRAWBERRY SENSE
-            </div>
+            <div class="text-xl font-black tracking-tighter text-red-700">STRAWBERRY SENSE</div>
             <nav class="hidden md:flex items-center space-x-8">
-                <a class="font-['Manrope'] tracking-tight text-sm font-semibold text-red-700 dark:text-red-500 border-b-2 border-red-700 dark:border-red-500 pb-1" href="index.html">HOME</a>
-                <a class="font-['Manrope'] tracking-tight text-sm font-semibold text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="history.html">HISTORY</a>
+                <a class="text-sm font-semibold text-red-700 border-b-2 border-red-700 pb-1" href="/">HOME</a>
+                <a class="text-sm font-semibold text-stone-600 hover:text-stone-900 transition-colors"
+                    href="/history">HISTORY</a>
             </nav>
         </div>
-        <div class="bg-stone-100 dark:bg-stone-800 h-[1px] w-full"></div>
     </header>
 
     <main class="max-w-[1440px] mx-auto px-8 py-12">
         <div class="mb-12">
-            <span class="font-label text-xs uppercase tracking-widest text-secondary font-bold mb-2 block">Agricultural Precision</span>
-            <h1 class="text-5xl font-extrabold tracking-tight text-on-surface mb-4">Plant Health Monitoring</h1>
-            <p class="text-on-surface-variant max-w-2xl text-lg">Harnessing advanced CNN algorithms and real-time IoT integration to safeguard your strawberry yields.</p>
+            <span class="font-label text-xs uppercase tracking-widest text-secondary font-bold mb-2 block">Agricultural
+                Precision</span>
+            <h1 class="text-5xl font-extrabold tracking-tight mb-4">Plant Health Monitoring</h1>
+            <p class="text-on-surface-variant max-w-2xl text-lg">Harnessing advanced CNN algorithms and real-time IoT
+                integration to safeguard your strawberry yields.</p>
         </div>
 
-        <div class="flex flex-col gap-8">
-            
+        <form id="uploadForm" method="POST" action="/" enctype="multipart/form-data" class="flex flex-col gap-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-                
-                <section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm transition-all duration-300 flex flex-col justify-between border border-surface-container-high">
+                <section
+                    class="bg-surface-container-lowest rounded-xl p-8 shadow-sm flex flex-col justify-between border border-surface-container-high">
                     <div>
                         <h2 class="text-xl font-bold font-headline mb-8 flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm">1</span>
+                            <span
+                                class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm shadow">1</span>
                             UNGGAH FOTO
                         </h2>
-                        
-                        <div class="border-2 border-dashed border-outline-variant rounded-xl p-12 flex flex-col items-center justify-center bg-surface-container-low hover:bg-surface-container transition-colors group cursor-pointer mb-8">
-                            <div class="w-20 h-20 rounded-full bg-primary-fixed flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+
+                        <div class="border-2 border-dashed border-gray-300 rounded-xl p-12 flex flex-col items-center justify-center bg-surface-container-low hover:bg-surface-container transition-colors group cursor-pointer mb-8 relative"
+                            onclick="document.getElementById('imageInput').click()">
+                            <input type="file" id="imageInput" name="image" accept="image/*" class="hidden" required
+                                onchange="document.getElementById('fileName').innerText = this.files[0].name">
+                            <div
+                                class="w-20 h-20 rounded-full bg-red-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                                 <span class="material-symbols-outlined text-primary text-4xl">photo_camera</span>
                             </div>
-                            <p class="text-on-surface-variant font-medium mb-4 text-center">Tarik dan lepas gambar daun ke sini</p>
-                            <button class="px-6 py-2.5 bg-white border border-outline rounded-full text-sm font-bold hover:bg-surface transition-colors shadow-sm">
-                                PILIH FILE
-                            </button>
+                            <p id="fileName" class="text-on-surface-variant font-medium mb-4 text-center">Klik untuk
+                                memilih gambar daun</p>
+                            <button type="button"
+                                class="px-6 py-2.5 bg-white border border-gray-300 rounded-full text-sm font-bold shadow-sm pointer-events-none">PILIH
+                                FILE</button>
                         </div>
-                        
+
                         <div class="space-y-4 mb-10">
-                            <label class="block font-label text-xs font-bold text-on-surface-variant uppercase tracking-wider">Durasi Relay (Jika Sakit)</label>
+                            <label
+                                class="block font-label text-xs font-bold text-on-surface-variant uppercase tracking-wider">Durasi
+                                Relay (Jika Sakit)</label>
                             <div class="relative flex items-center">
-                                <input class="w-full bg-surface-container-low border-0 rounded-lg px-4 py-4 focus:ring-2 focus:ring-secondary transition-all font-headline font-bold text-lg" placeholder="0" type="number" value="15" />
-                                <span class="absolute right-4 font-label text-sm text-on-surface-variant font-semibold">Detik</span>
+                                <input name="duration"
+                                    class="w-full bg-surface-container-low border-0 rounded-lg px-4 py-4 font-bold text-lg focus:ring-2 focus:ring-secondary"
+                                    type="number" value="{{ duration if duration else 15 }}" required />
+                                <span class="absolute right-4 font-label text-sm font-semibold">Detik</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <button class="w-full primary-gradient text-white py-5 rounded-xl font-bold text-lg tracking-wide hover:opacity-90 active:scale-[0.98] transition-all shadow-lg flex items-center justify-center gap-3 opacity-90">
-                        <span class="material-symbols-outlined">analytics</span>
-                        DETEKSI PENYAKIT
+
+                    <button id="submitBtn" type="submit"
+                        class="w-full primary-gradient text-white py-5 rounded-xl font-bold text-lg tracking-wide hover:opacity-90 active:scale-[0.98] transition-all shadow-lg flex items-center justify-center gap-3">
+                        <span id="btnIcon" class="material-symbols-outlined">analytics</span>
+                        <span id="btnText">DETEKSI PENYAKIT</span>
                     </button>
                 </section>
 
-                <section class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col h-full border border-surface-container-high">
-                    <div class="relative overflow-hidden h-64 md:h-72 w-full shrink-0 bg-surface-container flex flex-col items-center justify-center border-b border-surface-container-high">
-                        <span class="material-symbols-outlined text-6xl mb-3 text-on-surface-variant opacity-40">imagesmode</span>
-                        <p class="text-sm font-medium text-on-surface-variant opacity-60">Belum ada foto yang dianalisis</p>
-                        
-                        <div class="absolute bottom-4 left-4 right-4 glass-panel p-4 rounded-lg border border-white/20">
+                <section
+                    class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col h-full border border-surface-container-high">
+                    {% if uploaded_image_path %}
+                    <div
+                        class="relative overflow-hidden h-64 md:h-72 w-full shrink-0 bg-surface-container border-b border-surface-container-high">
+                        <img src="{{ url_for('uploaded_file', filename=uploaded_image_path) }}"
+                            class="w-full h-full object-cover" alt="Scanned leaf">
+                        <div
+                            class="absolute bottom-4 left-4 right-4 glass-panel p-4 rounded-lg border border-white/40 shadow-lg">
                             <div class="flex justify-between items-center">
-                                <span class="font-label text-[10px] uppercase font-bold tracking-widest text-on-surface">CNN Confidence</span>
-                                <span class="font-headline font-black text-on-surface-variant text-xl">0%</span>
+                                <span
+                                    class="font-label text-[10px] uppercase font-bold tracking-widest text-on-surface">CNN
+                                    Confidence</span>
+                                <span class="font-headline font-black text-primary text-xl">{{ confidence }}%</span>
                             </div>
                             <div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-2 overflow-hidden">
-                                <div class="bg-surface-variant h-full w-[0%]"></div>
+                                <div class="bg-primary h-full transition-all duration-1000"
+                                    style="width: {{ confidence }}%"></div>
                             </div>
                         </div>
                     </div>
-                    
                     <div class="p-8 flex flex-col flex-grow justify-between bg-surface-bright">
                         <div>
-                            <h2 class="text-xl font-bold font-headline mb-6 flex items-center gap-3 text-on-surface-variant">
-                                <span class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-sm">2</span>
+                            <h2 class="text-xl font-bold font-headline mb-6 flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm shadow">2</span>
                                 HASIL ANALISIS CNN
                             </h2>
                             <div class="space-y-6">
-                                <div class="flex items-start gap-4 opacity-50">
-                                    <div class="p-2 rounded-lg bg-surface-container-low">
-                                        <span class="material-symbols-outlined text-on-surface-variant" data-weight="fill">monitor_heart</span>
-                                    </div>
+                                <div class="flex items-start gap-4">
+                                    {% if detected_disease in ["Buah Sehat", "Daun Sehat"] %}
+                                    <div class="p-2 rounded-lg bg-green-100"><span
+                                            class="material-symbols-outlined text-green-700">check_circle</span></div>
                                     <div>
-                                        <p class="font-label text-xs font-bold text-on-surface-variant uppercase mb-1">Status</p>
-                                        <p class="font-headline font-extrabold text-on-surface-variant text-lg">-</p>
+                                        <p class="font-label text-xs font-bold text-on-surface-variant uppercase mb-1">
+                                            Status</p>
+                                        <p class="font-headline font-extrabold text-green-700 text-lg">SEHAT</p>
                                     </div>
+                                    {% else %}
+                                    <div class="p-2 rounded-lg bg-error-container"><span
+                                            class="material-symbols-outlined text-error">warning</span></div>
+                                    <div>
+                                        <p class="font-label text-xs font-bold text-on-surface-variant uppercase mb-1">
+                                            Status</p>
+                                        <p class="font-headline font-extrabold text-error text-lg">TERDETEKSI PENYAKIT
+                                        </p>
+                                    </div>
+                                    {% endif %}
                                 </div>
-                                <div class="flex items-start gap-4 opacity-50">
-                                    <div class="p-2 rounded-lg bg-surface-container-low">
-                                        <span class="material-symbols-outlined text-on-surface-variant">psychology</span>
-                                    </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="p-2 rounded-lg bg-surface-container-low"><span
+                                            class="material-symbols-outlined">psychology</span></div>
                                     <div>
-                                        <p class="font-label text-xs font-bold text-on-surface-variant uppercase mb-1">Diagnosis</p>
-                                        <p class="font-headline font-extrabold text-on-surface-variant text-2xl">-</p>
+                                        <p class="font-label text-xs font-bold text-on-surface-variant uppercase mb-1">
+                                            Diagnosis</p>
+                                        <p class="font-headline font-extrabold text-2xl">{{ detected_disease }}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <p class="text-xs text-on-surface-variant italic mt-8 text-right opacity-0">Scan processed in 0ms</p>
+                        <p class="text-xs text-gray-400 font-medium italic mt-8 text-right">Server processed in {{
+                            latency }}ms</p>
                     </div>
+                    {% else %}
+                    <div
+                        class="relative overflow-hidden h-64 md:h-72 w-full shrink-0 bg-surface-container flex flex-col items-center justify-center border-b border-surface-container-high">
+                        <span
+                            class="material-symbols-outlined text-6xl mb-3 text-on-surface-variant opacity-40">imagesmode</span>
+                        <p class="text-sm font-medium text-on-surface-variant opacity-60">Belum ada foto yang dianalisis
+                        </p>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow justify-between bg-surface-bright">
+                        <div>
+                            <h2
+                                class="text-xl font-bold font-headline mb-6 flex items-center gap-3 text-on-surface-variant">
+                                <span
+                                    class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-sm">2</span>
+                                HASIL ANALISIS CNN
+                            </h2>
+                            <div class="space-y-6 opacity-50">
+                                <div class="flex items-start gap-4">
+                                    <div class="p-2 rounded-lg bg-surface-container-low"><span
+                                            class="material-symbols-outlined">monitor_heart</span></div>
+                                    <div>
+                                        <p class="font-label text-xs font-bold uppercase mb-1">Status</p>
+                                        <p class="font-headline font-extrabold text-lg">-</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="p-2 rounded-lg bg-surface-container-low"><span
+                                            class="material-symbols-outlined">psychology</span></div>
+                                    <div>
+                                        <p class="font-label text-xs font-bold uppercase mb-1">Diagnosis</p>
+                                        <p class="font-headline font-extrabold text-2xl">-</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
                 </section>
             </div>
 
             <div class="w-full">
-                <section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm border-l-8 border-surface-container-highest">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
-                        <h2 class="text-xl font-bold font-headline flex items-center gap-3 text-on-surface-variant">
-                            <span class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-sm">3</span>
+                <section
+                    class="bg-surface-container-lowest rounded-xl p-8 shadow-sm border-l-8 {% if detected_disease and detected_disease not in ['Buah Sehat', 'Daun Sehat'] %}border-secondary{% else %}border-surface-container-highest{% endif %}">
+                    <div class="flex justify-between items-center gap-6 mb-8">
+                        <h2 class="text-xl font-bold font-headline flex items-center gap-3">
+                            <span
+                                class="w-8 h-8 rounded-full {% if detected_disease and detected_disease not in ['Buah Sehat', 'Daun Sehat'] %}bg-secondary text-white{% else %}bg-surface-container-high text-on-surface-variant{% endif %} flex items-center justify-center text-sm shadow">3</span>
                             STATUS KONTROL IOT (MQTT)
                         </h2>
-                        <div class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-bold text-xs uppercase tracking-widest">
-                            <span class="w-2 h-2 rounded-full bg-surface-variant"></span>
-                            STANDBY
+                        <div id="mqttBadge"
+                            class="flex items-center gap-2 px-4 py-1.5 rounded-full {% if detected_disease %}bg-green-100 text-green-800{% else %}bg-surface-container text-on-surface-variant{% endif %} font-bold text-xs uppercase transition-all duration-500">
+                            <span id="mqttDot"
+                                class="w-2 h-2 rounded-full {% if detected_disease %}bg-green-600 animate-pulse{% else %}bg-gray-400{% endif %}"></span>
+                            <span id="mqttText">{{ "TRANSMITTED" if detected_disease else "STANDBY" }}</span>
                         </div>
                     </div>
-                    
+
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                        {% if detected_disease and detected_disease not in ["Buah Sehat", "Daun Sehat"] %}
+                        <div class="bg-surface rounded-xl p-4 border border-gray-100">
+                            <p class="font-label text-[10px] font-bold uppercase mb-2">Status</p>
+                            <p id="iotStatus" class="font-headline font-bold text-secondary text-lg transition-colors">
+                                MENYALA</p>
+                        </div>
+                        <div class="bg-surface rounded-xl p-4 border border-gray-100">
+                            <p class="font-label text-[10px] font-bold uppercase mb-2">Action</p>
+                            <p id="iotAction" class="font-headline font-bold text-lg transition-colors">Pompa Aktif</p>
+                        </div>
+                        <div
+                            class="bg-surface rounded-xl p-4 col-span-2 relative overflow-hidden border border-gray-100">
+                            <p class="font-label text-[10px] font-bold uppercase mb-2">Sisa Waktu</p>
+                            <p class="font-headline font-black text-3xl"><span id="countdownVal">{{ duration }}</span>
+                                <span class="text-base font-medium text-gray-500">Detik</span>
+                            </p>
+                            <div id="progressBar"
+                                class="absolute bottom-0 left-0 h-1.5 bg-secondary w-full transition-all duration-1000 ease-linear">
+                            </div>
+                        </div>
+                        {% else %}
                         <div class="bg-surface rounded-xl p-4 opacity-70">
-                            <p class="font-label text-[10px] font-bold text-on-surface-variant uppercase mb-2">Status</p>
-                            <p class="font-headline font-bold text-on-surface-variant text-lg">MATI</p>
+                            <p class="font-label text-[10px] font-bold uppercase mb-2">Status</p>
+                            <p class="font-headline font-bold text-lg">MATI</p>
                         </div>
                         <div class="bg-surface rounded-xl p-4 opacity-70">
-                            <p class="font-label text-[10px] font-bold text-on-surface-variant uppercase mb-2">Action</p>
-                            <p class="font-headline font-bold text-on-surface-variant text-lg">-</p>
+                            <p class="font-label text-[10px] font-bold uppercase mb-2">Action</p>
+                            <p class="font-headline font-bold text-lg">-</p>
                         </div>
-                        <div class="bg-surface rounded-xl p-4 col-span-2 md:col-span-2 relative overflow-hidden opacity-70">
-                            <p class="font-label text-[10px] font-bold text-on-surface-variant uppercase mb-2">Sisa Waktu</p>
-                            <p class="font-headline font-black text-3xl text-on-surface-variant">0 <span class="text-base font-medium text-on-surface-variant">Detik</span></p>
-                            <div class="absolute bottom-0 left-0 h-1.5 bg-surface-variant w-[0%] transition-all duration-1000"></div>
+                        <div class="bg-surface rounded-xl p-4 col-span-2 opacity-70">
+                            <p class="font-label text-[10px] font-bold uppercase mb-2">Sisa Waktu</p>
+                            <p class="font-headline font-black text-3xl">0 <span
+                                    class="text-base font-medium">Detik</span></p>
                         </div>
+                        {% endif %}
                     </div>
-                    
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="flex-1 px-6 py-4 rounded-xl border-2 border-surface-container text-on-surface-variant font-bold hover:bg-surface-container-high transition-all flex items-center justify-center gap-2 opacity-50 cursor-not-allowed" disabled>
+                        <button
+                            class="flex-1 px-6 py-4 rounded-xl border-2 border-surface-container text-on-surface-variant font-bold hover:bg-surface-container-high transition-all flex items-center justify-center gap-2 opacity-50 cursor-not-allowed"
+                            disabled="">
                             <span class="material-symbols-outlined text-xl">stop_circle</span>
                             MATIKAN PAKSA
                         </button>
-                        <button class="flex-1 px-6 py-4 rounded-xl bg-surface-container text-on-surface-variant font-bold hover:bg-surface-container-highest transition-all flex items-center justify-center gap-2">
+                        <button
+                            class="flex-1 px-6 py-4 rounded-xl bg-surface-container text-on-surface-variant font-bold hover:bg-surface-container-highest transition-all flex items-center justify-center gap-2"
+                            fdprocessedid="d0mkdk">
                             <span class="material-symbols-outlined text-xl">settings_remote</span>
                             MANUAL OVERRIDE
                         </button>
                     </div>
                 </section>
             </div>
-            
-        </div>
+        </form>
     </main>
 
-    <footer class="mt-20 border-t border-surface-container-high py-12 px-8">
-        <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-lg font-black tracking-tighter text-stone-400">
-                STRAWBERRY SENSE
-            </div>
-            <div class="text-on-surface-variant text-xs">
-                © 2026 Botanical Architect AI. All rights reserved.
-            </div>
-        </div>
-    </footer>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function () {
+            const fileInput = document.getElementById('imageInput');
+            if (fileInput.files.length > 0) {
+                const btn = document.getElementById('submitBtn');
+                const icon = document.getElementById('btnIcon');
+                const text = document.getElementById('btnText');
+
+                btn.classList.add('opacity-70', 'cursor-not-allowed');
+                btn.classList.remove('hover:opacity-90', 'active:scale-[0.98]');
+
+                icon.innerText = 'sync';
+                icon.classList.add('animate-spin');
+                text.innerText = 'MEMPROSES MODEL...';
+            }
+        });
+
+        {% if detected_disease and detected_disease not in ["Buah Sehat", "Daun Sehat"] %}
+        let timeLeft = {{ duration }};
+        const totalTime = {{ duration }};
+
+        const countdownEl = document.getElementById('countdownVal');
+        const progressEl = document.getElementById('progressBar');
+        const statusEl = document.getElementById('iotStatus');
+        const actionEl = document.getElementById('iotAction');
+
+        const badgeEl = document.getElementById('mqttBadge');
+        const badgeDot = document.getElementById('mqttDot');
+        const badgeText = document.getElementById('mqttText');
+
+        if (countdownEl && timeLeft > 0) {
+            const timer = setInterval(() => {
+                timeLeft--;
+                countdownEl.innerText = timeLeft;
+
+                const percentage = (timeLeft / totalTime) * 100;
+                progressEl.style.width = percentage + '%';
+
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    countdownEl.innerText = "0";
+                    progressEl.style.width = '0%';
+
+                    progressEl.classList.remove('bg-secondary');
+                    progressEl.classList.add('bg-gray-300');
+
+                    statusEl.innerText = "SELESAI";
+                    statusEl.classList.remove('text-secondary');
+                    statusEl.classList.add('text-gray-500');
+
+                    actionEl.innerText = "Pompa Otomatis Berhenti";
+                    actionEl.classList.add('text-gray-500');
+
+                    badgeEl.classList.remove('bg-green-100', 'text-green-800');
+                    badgeEl.classList.add('bg-surface-container', 'text-on-surface-variant');
+                    badgeDot.classList.remove('bg-green-600', 'animate-pulse');
+                    badgeDot.classList.add('bg-gray-400');
+                    badgeText.innerText = 'STANDBY';
+                }
+            }, 1000);
+        }
+        {% endif %}
+    </script>
 </body>
 
 </html>
